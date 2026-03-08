@@ -1,0 +1,125 @@
+/* App Container */
+.App {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Logo */
+.App-logo {
+  height: 35vmin;
+  max-height: 220px;
+  width: auto;
+  pointer-events: none;
+}
+
+/* Logo Animation */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Links */
+.App-link {
+  color: #61dafb;
+  word-break: break-word;
+}
+
+/* Logo rotation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button */
+#button {
+  text-decoration: none;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  animation-duration: 0.9s;
+  padding: 10px 20px;
+  font-size: clamp(14px, 2vw, 20px);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Button Hover Animation */
+#button:hover {
+  animation-name: pulse79;
+  animation-iteration-count: infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse79 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* -------- Responsive Design -------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 30vmin;
+  }
+
+  .App-header {
+    font-size: calc(10px + 2vmin);
+    padding: 15px;
+  }
+
+  #button {
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .App-logo {
+    height: 25vmin;
+  }
+
+  .App-header {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .App-header {
+    font-size: 22px;
+  }
+}
